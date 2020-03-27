@@ -1,1 +1,0 @@
-docker run -ti --rm --network=host -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority -v /tmp/.X11-unix:/tmp/.X11-unix qt
