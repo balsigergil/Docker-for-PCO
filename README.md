@@ -2,10 +2,10 @@
 <h3 align="center">Qt 5 avec Google test et PCOSyncro dans un seul conteneur</h3>
 <hr>
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/version-v0.0.1-green?style=for-the-badge" alt="version"></a>
+  <img src="https://img.shields.io/badge/version-v0.0.1-green?style=for-the-badge" alt="version">
   <a href="https://github.com/balsigergil/Docker-for-PCO/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-orange?style=for-the-badge" alt="version"></a>
   <a href="https://github.com/balsigergil/Docker-for-PCO#docker-for-pco"><img src="https://img.shields.io/badge/documentation-README-blue?style=for-the-badge" alt="documentation"></a>
-  <a href="#"><img src="https://img.shields.io/badge/platform-linux-yellow?style=for-the-badge&logo=Linux" alt="platform"></a>
+  <img src="https://img.shields.io/badge/platform-linux-yellow?style=for-the-badge&logo=Linux" alt="platform">
 </p>
 
 <h4 align="center">Système de conteneurisation Docker pour Qt avec un Dockerfile, un docker-compose.yml et un Makefile, le tout sans virtualisation. Fonctionne avec liaison xOrg directement sur l'hôte.</h4>
