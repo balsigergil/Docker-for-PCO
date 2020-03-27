@@ -1,19 +1,21 @@
 version: "3.7"
 services:
     qt:
-        build: 
+        container_name: qt
+        build:
             context: .
             args: 
-                USER_ID: $USER_ID
-                GROUP_ID: $GROUP_ID
-        volumes: 
-            - "$HOME/.Xauthority:/root/.Xauthority"
+                USER_ID: ${USER_ID}
+                GROUP_ID: ${GROUP_ID}
+        volumes:
+            - "$HOME/.Xauthority:/home/user/.Xauthority"
             - "/tmp/.X11-unix:/tmp/.X11-unix"
-            - "qt:/opt/Qt"
-            - "qt_conf:/root/.config/QtProject"
-        environment: 
+            - "qt-bin:/home/user/Qt"
+            - "qt-conf:/home/user/.config/QtProject"
+            - "./projects:/home/user/projects"
+        environment:
             - DISPLAY=$DISPLAY
         network_mode: "host"
 volumes:
-    qt:
-    qt_conf:
+    qt-bin:
+    qt-conf:
