@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+    qt:
+        build: 
+            context: .
+            args: 
+                USER_ID: $USER_ID
+                GROUP_ID: $GROUP_ID
+        volumes: 
+            - "$HOME/.Xauthority:/root/.Xauthority"
+            - "/tmp/.X11-unix:/tmp/.X11-unix"
+            - "qt:/opt/Qt"
+        environment: 
+            - DISPLAY=$DISPLAY
+        network_mode: "host"
+volumes:
+    qt:
