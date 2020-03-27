@@ -22,11 +22,10 @@ RUN cd /usr/src/gtest && \
 RUN wget -q $QT_URL -P $QT_DOWNLOAD_DIR && \
     chmod +x $QT_DOWNLOAD_DIR/*.run
 
-ADD setup.sh /usr/local/bin/setup
-#COPY qt-5.12.7.tar.gz qt-5.12.7.tar.gz
-#RUN tar -C /opt -zxf qt-5.12.7.tar.gz
+COPY setup.sh /usr/local/bin/setup
 
 VOLUME [ "/opt/Qt" ]
+VOLUME [ "/root/.config/QtProject" ]
 
 # RUN groupadd -f -g ${GROUP_ID} user
 # RUN useradd -m -u ${USER_ID} -g ${GROUP_ID} user

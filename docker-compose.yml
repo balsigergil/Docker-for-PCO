@@ -10,8 +10,10 @@ services:
             - "$HOME/.Xauthority:/root/.Xauthority"
             - "/tmp/.X11-unix:/tmp/.X11-unix"
             - "qt:/opt/Qt"
+            - "qt_conf:/root/.config/QtProject"
         environment: 
             - DISPLAY=$DISPLAY
         network_mode: "host"
 volumes:
     qt:
+    qt_conf:
