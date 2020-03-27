@@ -62,9 +62,9 @@ Pour lancer Qt, il suffit d'exécuter la tâche suivante.
 make qt
 ```
 
-La première fois que cette commande est executée, il vous est demandé d'installer Qt. Cette installation de fait dans une volume de Docker et est ainsi persitante et ne devra être faite qu'une seule fois à moins de supprimer les volumes.
+La première fois que cette commande est executée, il vous est demandé d'installer Qt. Cette installation de fait dans une volume de Docker, dans `/home/user/Qt`, et est ainsi persitante et ne devra être faite qu'une seule fois à moins de supprimer les volumes.
 
-Pour l'installation de Qt, il faut sélectionner la version **5.12.7**. Plus d'information dans [le PDF sur CyberLearn](https://cyberlearn.hes-so.ch/pluginfile.php/3175645/mod_resource/content/1/Guide_labos_PCO_v2020.1.0.pdf).
+Pour l'installation de Qt, il faut sélectionner la version **5.12.7**. Plus d'information dans [le PDF sur CyberLearn](https://cyberlearn.hes-so.ch/pluginfile.php/3175645/mod_resource/content/1/Guide_labos_PCO_v2020.1.0.pdf). Pour le reste, laissez les paramètres par défaut.
 
 #### Nettoyage
 
