@@ -10,7 +10,7 @@ ARG USER_ID
 ARG GROUP_ID
 
 RUN apt-get update -yqq && \
-    apt-get install -yqq build-essential gcc git vim wget cmake libgtest-dev libqt5gui5 x11-apps libgl-dev
+    apt-get install -yqq build-essential gcc gdb git vim wget unzip cmake libgtest-dev libqt5gui5 x11-apps libgl-dev
 
 # Installation de Google Test
 RUN cd /usr/src/gtest && \
@@ -29,9 +29,16 @@ RUN mkdir -p libpcosyncro && \
     mv libpcosyncro/*.a /usr/local/lib && \
     rm -rf libpcosyncro libpcosyncro-precompiled.tar.gz
 
-# Chargement le l'installateur de Qt
+# Chargement le l'installateur de Qt 
 RUN wget -q $QT_URL -P $QT_DOWNLOAD_DIR && \
     chmod +x $QT_DOWNLOAD_DIR/*.run
+
+# Installation de la police JetBrains Mono (https://www.jetbrains.com/lp/mono/)
+RUN wget -q https://download.jetbrains.com/fonts/JetBrainsMono-1.0.3.zip && \
+    unzip JetBrainsMono-1.0.3.zip && \
+    cp JetBrainsMono-1.0.3/ttf/*.ttf /usr/share/fonts && \
+    fc-cache -f -v && \
+    rm -rf JetBrainsMono-1.0.3 JetBrainsMono-1.0.3.zip
 
 RUN groupadd -f -g ${GROUP_ID} user
 RUN useradd -m -u ${USER_ID} -g ${GROUP_ID} user

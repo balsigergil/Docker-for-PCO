@@ -9,7 +9,7 @@ help: ## Affiche cette aide
 
 .PHONY: qt
 qt: ## Lance Qt
-	$(dc) up
+	$(dc) run --rm qt
 
 .PHONY: shell
 shell: ## Lance le shell du conteneur Qt
@@ -23,10 +23,8 @@ root: ## Lance le shell du conteneur Qt en root
 build: ## Construit l'image
 	$(dc) build
 
-.PHONY: clean
-clean: ## Supprime le conteneur Qt
-	$(dc) down
-
 .PHONY: mrproper
-mrproper: ## Supprime le conteneur ainsi que les volumes
+mrproper: ## Supprime les volumes et les images
 	$(dc) down -v
+	docker image rm pco-qt:2020
+	docker image prune -f

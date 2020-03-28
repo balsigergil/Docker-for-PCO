@@ -2,6 +2,7 @@ version: "3.7"
 services:
     qt:
         container_name: qt
+        image: "pco-qt:2020"
         build:
             context: .
             args: 

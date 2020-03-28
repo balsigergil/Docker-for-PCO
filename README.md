@@ -20,6 +20,7 @@ Avec ce système, il n'est plus nécessaire de lancer sa machine virtuelle REDS 
 - [Installateur Qt 5](https://www.qt.io/download-open-source)
 - [PCOSynchro précompilée](https://gitlab.com/reds-public/pco-synchro)
 - [Google Test](https://github.com/google/googletest)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ## Démarrage rapide
 
@@ -69,15 +70,15 @@ Pour l'installation de Qt, il faut sélectionner la version **5.12.7**. Plus d'i
 
 #### Nettoyage
 
-Vous pouvez supprimer le conteneur avec la commande suivante.
+Les commandes précédentes ne créent qu'un conteneur temporaire qui se supprime tout seul lorsque Qt est fermé.
+
+Cependant si vous souhaitez supprimer les volumes créés, il est possible de le faire avec la commande suivante.
 
 ```
-make clean
+make mrproper
 ```
 
-Vos projet ainsi que l'installation de Qt sont préservés.
-
-Si vous souhaitez tout supprimer, le conteneur et les volumes, il est possible de le faire avec `make mrproper`.
+L'installation de Qt ainsi que vos préférences Qt sont supprimée. Vos projet sont préservés.
 
 ## Troubleshooting
 
