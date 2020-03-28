@@ -1,5 +1,5 @@
 <h1 align="center">Docker for PCO</h1>
-<h3 align="center">Qt 5 avec Google test et PCOSyncro dans un seul conteneur</h3>
+<h3 align="center">Qt 5 avec Google Test et PCOSyncro dans un seul conteneur</h3>
 <hr>
 <p align="center">
   <img src="https://img.shields.io/badge/version-v0.0.1-green?style=for-the-badge" alt="version">
