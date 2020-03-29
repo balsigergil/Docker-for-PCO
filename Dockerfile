@@ -9,8 +9,10 @@ ENV QT_INSTALL_DIR=/home/user/Qt
 ARG USER_ID
 ARG GROUP_ID
 
+# Installation de dépendances
 RUN apt-get update -yqq && \
-    apt-get install -yqq build-essential gcc gdb git vim wget unzip cmake libgtest-dev libqt5gui5 x11-apps libgl-dev xterm
+    apt-get install -yqq build-essential gcc gdb git vim wget unzip \
+    cmake libgtest-dev libqt5gui5 x11-apps libgl-dev xterm mesa-utils
 
 # Installation de Google Test
 RUN cd /usr/src/gtest && \

@@ -13,7 +13,7 @@
 
 ## Fonctionnement
 
-Avec ce système, il n'est plus nécessaire de lancer sa machine virtuelle REDS à chaque fois que l'on veut utiliser Qt pour PCO. Qt se lance dans un conteneur Docker avec toutes les dépendences nécessaire pour travailler le cours de PCO 2020.
+Avec ce système, il n'est plus nécessaire de lancer sa machine virtuelle REDS à chaque fois que l'on veut utiliser Qt pour PCO. Qt se lance dans un conteneur Docker avec toutes les dépendances nécessaire pour travailler le cours de PCO 2020.
 
 ## Contenu
 
@@ -34,11 +34,12 @@ Avec ce système, il n'est plus nécessaire de lancer sa machine virtuelle REDS 
     sudo pacman -S docker docker-compose
     ```
 
-    Il faut ensuite ajouter votre utilisateur actuel au groupe `docker` et activer le service.
+    Il faut ensuite ajouter votre utilisateur actuel au groupe `docker`, activer le service et redémarrer pour appliquer le tout.
 
     ```
     sudo usermod -aG docker $USER
     sudo systemctl enable --now docker
+    sudo reboot
     ```
 
 ### Clonage du projet
@@ -78,7 +79,7 @@ Cependant si vous souhaitez supprimer les volumes créés, il est possible de le
 make mrproper
 ```
 
-L'installation de Qt ainsi que vos préférences Qt sont supprimée. Vos projet sont préservés.
+L'installation de Qt ainsi que vos préférences Qt sont supprimés. Vos projet sont préservés.
 
 ## Troubleshooting
 
