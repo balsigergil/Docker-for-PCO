@@ -10,7 +10,7 @@ ARG USER_ID
 ARG GROUP_ID
 
 RUN apt-get update -yqq && \
-    apt-get install -yqq build-essential gcc gdb git vim wget unzip cmake libgtest-dev libqt5gui5 x11-apps libgl-dev
+    apt-get install -yqq build-essential gcc gdb git vim wget unzip cmake libgtest-dev libqt5gui5 x11-apps libgl-dev xterm
 
 # Installation de Google Test
 RUN cd /usr/src/gtest && \
