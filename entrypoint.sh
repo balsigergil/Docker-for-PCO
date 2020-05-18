@@ -29,7 +29,8 @@ install_pcosynchro() {
     #ln -s $PCOSYNCHRO_CLONE_DIR/src /usr/local/include/pcosynchro
 }
 
-if [[ $1 -eq "update" ]]; then
+if [[ $1 == "update" ]]
+then
     install_pcosynchro
 else
     [ -f "${QT_INSTALL_DIR}/Tools/QtCreator/bin/qtcreator" ] && start_qt || install_qt
