@@ -12,7 +12,7 @@ ARG GROUP_ID
 # Installation de dépendances
 RUN apt-get update -yqq && \
     apt-get install -yqq build-essential gcc gdb git vim wget unzip \
-    cmake libgtest-dev libqt5gui5 x11-apps libgl-dev xterm mesa-utils
+    cmake libgtest-dev libqt5gui5 libqt5multimedia5 libpulse-mainloop-glib0 x11-apps libgl-dev xterm mesa-utils
 
 # Installation de Google Test
 RUN cd /usr/src/gtest && \
