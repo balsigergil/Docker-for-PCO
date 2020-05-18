@@ -23,6 +23,11 @@ root: ## Lance le shell du conteneur Qt en root
 build: ## Construit l'image
 	$(dc) build
 
+.PHONY: update
+update: ## Update PCO syncro
+	$(dc) run --rm qt ./entrypoint.sh update
+	$(dc) build
+
 .PHONY: mrproper
 mrproper: ## Supprime les volumes et les images
 	$(dc) down -v

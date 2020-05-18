@@ -14,6 +14,8 @@ services:
             - "qt-bin:/home/user/Qt"
             - "qt-conf:/home/user/.config/QtProject"
             - "./projects:/home/user/projects"
+            - "./pcosyncro:/home/user/pcosyncro"
+            - "./entrypoint.sh:/home/user/entrypoint.sh"
         environment:
             - DISPLAY=$DISPLAY
         network_mode: "host"

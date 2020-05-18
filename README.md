@@ -69,6 +69,14 @@ La première fois que cette commande est executée, il vous est demandé d'insta
 
 Pour l'installation de Qt, il faut sélectionner la version **5.12.7**. Plus d'information dans [le PDF sur CyberLearn](https://cyberlearn.hes-so.ch/pluginfile.php/3175645/mod_resource/content/1/Guide_labos_PCO_v2020.1.0.pdf). Pour le reste, laissez les paramètres par défaut.
 
+#### Mise à jour de PCO Synchro
+
+Pour mettre à jour la librairie PCO Synchro, il faut exécuter la commande suivante :
+
+```
+make update
+```
+
 #### Nettoyage
 
 Les commandes précédentes ne créent qu'un conteneur temporaire qui se supprime tout seul lorsque Qt est fermé.

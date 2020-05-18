@@ -20,7 +20,7 @@ RUN cd /usr/src/gtest && \
     make -j4 && \
     ln -sf /usr/src/gtest/libgtest.a /usr/local/lib/libgtest.a
 
-COPY ./libpcosyncro-precompiled.tar.gz ./libpcosyncro-precompiled.tar.gz
+COPY ./pcosyncro/libpcosyncro-precompiled.tar.gz ./libpcosyncro-precompiled.tar.gz
 
 # Installation de PcoSyncro
 RUN mkdir -p libpcosyncro && \
@@ -55,6 +55,7 @@ WORKDIR /home/user
 VOLUME [ "/home/user/Qt" ]
 VOLUME [ "/home/user/.config/QtProject" ]
 VOLUME [ "/home/user/projects" ]
+VOLUME [ "/home/user/pcosyncro" ]
 
 COPY ./entrypoint.sh ./entrypoint.sh
 
